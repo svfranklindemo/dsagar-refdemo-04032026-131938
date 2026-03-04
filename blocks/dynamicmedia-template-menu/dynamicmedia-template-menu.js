@@ -41,7 +41,10 @@ function buildTemplateUrl(state) {
   params.set('$price', state.price.replace(/\s/g, ''));
   const headlineEncoded = state.headline.replace(/\n/g, ' \\par ').trim();
   params.set('$headline', headlineEncoded);
-  const query = params.toString().replace("%24", '$').replace("%2F", '/').replace("%2520", '%20');
+  var query = params.toString().replace("%24", '$')
+  query = query.replace("%2F", '/')
+  query = query.replace("%2520", '%20');
+  query = query.replace("%24", '$');
   // const query = params.toString().replace(/\+/g, '%20');
   return `${DEFAULT_TEMPLATE_BASE}?${query}`;
 }
