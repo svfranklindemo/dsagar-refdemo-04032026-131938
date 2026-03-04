@@ -1179,6 +1179,10 @@
       ]
   },
   {
+    "id": "dm-template-menu",
+    "fields": []
+  },
+  {
     "id": "teaser",
     "fields": [
       {
