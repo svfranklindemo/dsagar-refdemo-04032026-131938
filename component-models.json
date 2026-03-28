@@ -1182,6 +1182,10 @@
     "id": "dm-template-menu",
     "fields": []
   },
+{
+"id":"flight-booking",
+"fields": []
+},
   {
     "id": "teaser",
     "fields": [

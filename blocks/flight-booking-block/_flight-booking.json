@@ -1,0 +1,283 @@
+{
+  "definitions": [
+    {
+      "title": "Flight booking widget",
+      "id": "flight-booking",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Flight booking widget",
+              "model": "flight-booking",
+              "key-value": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "flight-booking",
+      "fields": [
+        {
+          "component": "select",
+          "name": "activetab",
+          "label": "Default active tab",
+          "valueType": "string",
+          "value": "flight",
+          "options": [
+            { "name": "Flight", "value": "flight" },
+            { "name": "Manage", "value": "manage" },
+            { "name": "Check-in", "value": "checkin" }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "triptype",
+          "label": "Default trip type",
+          "valueType": "string",
+          "value": "round-trip",
+          "options": [
+            { "name": "Round Trip", "value": "round-trip" },
+            { "name": "One-way", "value": "one-way" },
+            { "name": "Multi-City", "value": "multi-city" }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "flighttablabel",
+          "label": "Flight tab label",
+          "valueType": "string",
+          "value": "Flight"
+        },
+        {
+          "component": "text",
+          "name": "managetablabel",
+          "label": "Manage tab label",
+          "valueType": "string",
+          "value": "Manage"
+        },
+        {
+          "component": "text",
+          "name": "checkintablabel",
+          "label": "Check-in tab label",
+          "valueType": "string",
+          "value": "Check-in"
+        },
+        {
+          "component": "text",
+          "name": "mileslabel",
+          "label": "Miles toggle label",
+          "valueType": "string",
+          "value": "Pay with Alfursan Miles"
+        },
+        {
+          "component": "boolean",
+          "name": "showmilestoggle",
+          "label": "Show miles toggle",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "showswapbutton",
+          "label": "Show swap button",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "showpromolink",
+          "label": "Show promo code link",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "showmanage",
+          "label": "Show Manage tab",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "boolean",
+          "name": "showcheckin",
+          "label": "Show Check-in tab",
+          "valueType": "boolean",
+          "value": true
+        },
+        {
+          "component": "text",
+          "name": "fromlabel",
+          "label": "Origin label",
+          "valueType": "string",
+          "value": "From"
+        },
+        {
+          "component": "text",
+          "name": "fromplaceholder",
+          "label": "Origin placeholder",
+          "valueType": "string",
+          "value": "Departure"
+        },
+        {
+          "component": "text",
+          "name": "tolabel",
+          "label": "Destination label",
+          "valueType": "string",
+          "value": "To"
+        },
+        {
+          "component": "text",
+          "name": "toplaceholder",
+          "label": "Destination placeholder",
+          "valueType": "string",
+          "value": "Destination"
+        },
+        {
+          "component": "text",
+          "name": "datelabel",
+          "label": "Date label",
+          "valueType": "string",
+          "value": "Date"
+        },
+        {
+          "component": "text",
+          "name": "departuredatelabel",
+          "label": "Departure date label",
+          "valueType": "string",
+          "value": "Departure"
+        },
+        {
+          "component": "text",
+          "name": "returndatelabel",
+          "label": "Return date label",
+          "valueType": "string",
+          "value": "Return"
+        },
+        {
+          "component": "text",
+          "name": "departuredate",
+          "label": "Default departure date",
+          "valueType": "string",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "returndate",
+          "label": "Default return date",
+          "valueType": "string",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "passengerslabel",
+          "label": "Passengers label",
+          "valueType": "string",
+          "value": "Passengers"
+        },
+        {
+          "component": "text",
+          "name": "passengersvalue",
+          "label": "Passengers value",
+          "valueType": "string",
+          "value": "1 Adult"
+        },
+        {
+          "component": "text",
+          "name": "promolabel",
+          "label": "Promo code label",
+          "valueType": "string",
+          "value": "+ Add promo code"
+        },
+        {
+          "component": "text",
+          "name": "ctalabel",
+          "label": "Primary CTA label",
+          "valueType": "string",
+          "value": "Let\'s fly!"
+        },
+        {
+          "component": "text",
+          "name": "multicityhint",
+          "label": "Multi-city helper text",
+          "valueType": "string",
+          "value": "Add more city pairs in the live booking flow"
+        },
+        {
+          "component": "text",
+          "name": "manageheading",
+          "label": "Manage heading",
+          "valueType": "string",
+          "value": "Manage your booking"
+        },
+        {
+          "component": "text",
+          "name": "managedescription",
+          "label": "Manage description",
+          "valueType": "string",
+          "value": "Retrieve or change an existing reservation."
+        },
+        {
+          "component": "text",
+          "name": "managereferencelabel",
+          "label": "Manage reference label",
+          "valueType": "string",
+          "value": "Booking reference"
+        },
+        {
+          "component": "text",
+          "name": "managelastnamelabel",
+          "label": "Manage last name label",
+          "valueType": "string",
+          "value": "Last name"
+        },
+        {
+          "component": "text",
+          "name": "managectalabel",
+          "label": "Manage CTA label",
+          "valueType": "string",
+          "value": "Find booking"
+        },
+        {
+          "component": "text",
+          "name": "checkinheading",
+          "label": "Check-in heading",
+          "valueType": "string",
+          "value": "Check in to your flight"
+        },
+        {
+          "component": "text",
+          "name": "checkindescription",
+          "label": "Check-in description",
+          "valueType": "string",
+          "value": "Complete check-in and download your boarding pass."
+        },
+        {
+          "component": "text",
+          "name": "checkinreferencelabel",
+          "label": "Check-in reference label",
+          "valueType": "string",
+          "value": "Booking reference"
+        },
+        {
+          "component": "text",
+          "name": "checkinlastnamelabel",
+          "label": "Check-in last name label",
+          "valueType": "string",
+          "value": "Last name"
+        },
+        {
+          "component": "text",
+          "name": "checkinctalabel",
+          "label": "Check-in CTA label",
+          "valueType": "string",
+          "value": "Check in"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
