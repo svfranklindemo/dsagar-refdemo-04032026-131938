@@ -161,7 +161,8 @@ function buildSlide(row, index) {
   const positionCell = getFieldCell(row, 'contentPosition', 3)
     || getFieldCell(row, 'contentposition', 3);
 
-  if (!mediaCell) return null;
+  const slideImage = mediaCell?.querySelector('picture, img');
+  if (!slideImage) return null;
 
   const altText = readNodeValue(altCell);
   const contentPosition = normalizePosition(readNodeValue(positionCell));
@@ -207,7 +208,9 @@ function setSlideState(slides, activeIndex) {
 
 export default function decorate(block) {
   const settings = extractBlockOptions(block);
-  const authoredRows = [...block.children].filter((row) => row.children.length);
+  let authoredRows = [...block.children].filter((row) => row.children.length);
+  authoredRows = authoredRows.filter((row) => row.querySelector('picture'));
+
   const slides = authoredRows
     .map((row, index) => buildSlide(row, index))
     .filter(Boolean);
