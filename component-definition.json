@@ -411,14 +411,14 @@
           }
         },
 {
-      "title": "Flight booking widget",
+      "title": "Flight booking",
       "id": "flight-booking",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Flight booking widget",
+              "name": "Flight booking",
               "model": "flight-booking",
               "key-value": true
             }
