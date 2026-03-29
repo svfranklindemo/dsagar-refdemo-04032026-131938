@@ -1042,6 +1042,125 @@
     ]
   },
   {
+    "id": "image-slider",
+    "fields": [
+      {
+        "component": "select",
+        "name": "slideheight",
+        "label": "Slide Height",
+        "valueType": "string",
+        "value": "large",
+        "options": [
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "overlaytheme",
+        "label": "Overlay Theme",
+        "valueType": "string",
+        "value": "light",
+        "options": [
+          {
+            "name": "Light Text",
+            "value": "light"
+          },
+          {
+            "name": "Dark Text",
+            "value": "dark"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "autoplay",
+        "label": "Autoplay",
+        "valueType": "boolean",
+        "value": "true"
+      },
+      {
+        "component": "text",
+        "name": "autoplayinterval",
+        "label": "Autoplay Interval (ms)",
+        "valueType": "string",
+        "value": "5000"
+      },
+      {
+        "component": "boolean",
+        "name": "showcontrols",
+        "label": "Show Prev/Next Controls",
+        "valueType": "boolean",
+        "value": "true"
+      },
+      {
+        "component": "boolean",
+        "name": "showpagination",
+        "label": "Show Pagination",
+        "valueType": "boolean",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "id": "image-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Overlay Content",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "contentPosition",
+        "label": "Content Position",
+        "valueType": "string",
+        "value": "left",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "video",
     "fields": [
       {

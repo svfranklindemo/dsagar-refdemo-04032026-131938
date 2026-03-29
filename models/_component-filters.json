@@ -11,6 +11,7 @@
       "button",
       "cards",
       "carousel",
+      "image-slider",
       "columns",
       "contentfragment",
       "dm-asset",
@@ -30,6 +31,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "image-slider",
+    "components": [
+      "image-slide"
     ]
   },
   {
